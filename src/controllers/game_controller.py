@@ -58,3 +58,5 @@ class GameController:
     def switch_view(self, new_state):
         self.screen_state = new_state
         self.current_view = self.view_map[self.screen_state]
+
+
