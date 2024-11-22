@@ -76,21 +76,3 @@ class CarAccidentController:
         print(f"Ending level with speed: {self.model.speed} and success_count: {self.model.success_count}")
 
         return level_result
-        
-# 測試「車禍」關卡
- # def process_event_result(self, event_result):
-    #     if event_result == START or event_result == NEXT_INFORM:
-    #         level = CAR_ACCIDENT  
-    #         self.screen_state = level
-    #         is_continue = self.controller_map[level].start()
-    #         if is_continue:
-    #             self.switch_view(NEXT_INFORM)
-    #         else:
-    #             self.switch_view(GAME_OVER)
-    #     elif event_result == RETRY:
-    #         self.controller_map = {
-    #             TYPHOON: TyphoonController(),
-    #             TEACHEROUT: TeacheroutController(),
-    #             CAR_ACCIDENT: CarAccidentController()
-    #         }
-    #         self.switch_view(HOME)
