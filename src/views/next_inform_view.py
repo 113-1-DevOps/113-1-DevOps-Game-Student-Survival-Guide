@@ -1,11 +1,11 @@
-<<<<<<< HEAD
+# next_inform_view.py
 import pygame
 from config.constants import *
 from utils.ui_tool import *
 
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 
-class TransitionView:
+class NextInformView:
     def __init__(self):
         self.background = pygame.transform.scale(pygame.image.load("images/transitions/transition_heart_full.png"), (SCREEN_WIDTH, SCREEN_HEIGHT))
         self.background_position = (0, 0)
@@ -26,8 +26,5 @@ class TransitionView:
 
     def handle_event(self, event):
         if event.type == pygame.MOUSEBUTTONDOWN and self.button_rect.collidepoint(event.pos):
-            return TRANSITION
+            return NEXT_INFORM
         return None
-=======
-
->>>>>>> d2edee631c3e369693b8f9af4321532540042938

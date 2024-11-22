@@ -58,4 +58,7 @@ class GameOverView:
 
 if __name__ == '__main__':
     GameOverView().draw()
+<<<<<<< HEAD
     
+=======
+>>>>>>> d2edee631c3e369693b8f9af4321532540042938
