@@ -48,3 +48,4 @@ class GameOverView:
 
 if __name__ == '__main__':
     GameOverView().draw()
+    
