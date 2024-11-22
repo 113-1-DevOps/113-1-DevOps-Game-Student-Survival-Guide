@@ -1,10 +1,12 @@
 import pygame
+import os, sys
 
 import os, sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 'src')))
 from src.controllers.game_controller import *
 
 def start():
+
     pygame.init()
     controller = GameController()
     

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import pygame
 from config.constants import *
 from utils.ui_tool import *
@@ -28,6 +27,3 @@ class TransitionView:
         if event.type == pygame.MOUSEBUTTONDOWN and self.button_rect.collidepoint(event.pos):
             return TRANSITION
         return None
-=======
-
->>>>>>> d2edee631c3e369693b8f9af4321532540042938
