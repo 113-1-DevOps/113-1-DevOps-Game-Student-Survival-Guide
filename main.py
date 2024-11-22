@@ -1,7 +1,8 @@
 import pygame
 import os, sys
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 'src')))
 
+import os, sys
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 'src')))
 from src.controllers.game_controller import *
 
 # OpenTelemetry 導入
@@ -24,26 +25,33 @@ def start():
         pygame.init()
         controller = GameController()
 
+    pygame.init()
+    controller = GameController()
+    
+    clock = pygame.time.Clock()
+     
     running = True
-    with tracer.start_as_current_span("game_loop") as span:
+    try:
         while running:
             for event in pygame.event.get():
-                # 記錄事件處理
-                with tracer.start_as_current_span("event_handling") as event_span:
-                    if event.type == pygame.QUIT:
-                        running = False
-                        event_span.set_attribute("event.type", "QUIT")
-                    else:
-                        event_span.set_attribute("event.type", str(event.type))
-                        with tracer.start_as_current_span("controller_handle_event"):
-                            controller.handle_event(event)
-
-if __name__ == '__main__':
-    # 主執行邏輯
-    try:
-        with tracer.start_as_current_span("main_execution"):
-            start()
+                
+                if event.type == pygame.QUIT:
+                    running = False
+                elif event.type == pygame.KEYDOWN:
+                    controller.handle_event(event)
+                elif event.type == pygame.MOUSEBUTTONDOWN:
+                    controller.handle_event(event)
+                elif event.type == pygame.MOUSEBUTTONUP:
+                    controller.handle_event(event)
+                elif event.type == pygame.MOUSEMOTION:
+                    controller.handle_event(event)
+                else:
+                    continue
+                    
+            pygame.display.flip()
+            clock.tick(60)
     except Exception as e:
-        with tracer.start_as_current_span("error") as error_span:
-            error_span.record_exception(e)
-            print(f"Error occurred: {e}")
+        print("An unexpected error occurred: %s", e)
+                    
+if __name__ == '__main__':
+    start()
