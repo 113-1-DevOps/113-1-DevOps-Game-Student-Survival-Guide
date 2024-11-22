@@ -5,25 +5,7 @@ import os, sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), 'src')))
 from src.controllers.game_controller import *
 
-# OpenTelemetry 導入
-from opentelemetry import trace
-from opentelemetry.sdk.trace import TracerProvider
-from opentelemetry.sdk.trace.export import BatchSpanProcessor
-from opentelemetry.exporter.otlp.proto.grpc.trace_exporter import OTLPSpanExporter
-
-# 配置 OpenTelemetry
-trace.set_tracer_provider(TracerProvider())
-tracer = trace.get_tracer(__name__)
-
-# 配置 OTLP Exporter，將數據發送到 OpenTelemetry Collector
-otlp_exporter = OTLPSpanExporter(endpoint="http://localhost:4317")
-span_processor = BatchSpanProcessor(otlp_exporter)
-trace.get_tracer_provider().add_span_processor(span_processor)
-
 def start():
-    with tracer.start_as_current_span("game_initialization"):
-        pygame.init()
-        controller = GameController()
 
     pygame.init()
     controller = GameController()
