@@ -4,7 +4,7 @@ SCREEN_WIDTH, SCREEN_HEIGHT = 800, 450
 # View Identification
 HOME = 0
 GAME_OVER = 1
-NEXT_INFORM =2
+TRANSITION =2
 
 # Game Identification
 TYPHOON = 'W'
