@@ -17,10 +17,17 @@ class GameOverView:
         self.item = pygame.image.load("images/failpage/failpage_background.png")
         self.item = pygame.transform.scale(self.item, (SCREEN_WIDTH, SCREEN_HEIGHT))  
         self.original_item = self.item  # 保存原始圖片
+        
+        self.retry_button = pygame.image.load("images/failpage/failpage_button.png")
+        self.retry_button_position = center_to_top_left(
+            2 * SCREEN_WIDTH / 3, 2 * SCREEN_HEIGHT / 3, #中心點 x,y
+            self.retry_button.get_width(), self.retry_button.get_height()
+        )
+        self.retry_button_rect = self.retry_button.get_rect(topleft=self.retry_button_position)
 
     def draw(self):
         scale_factor = 0.1  # 初始縮放比例
-        scale_speed = 0.02  # 縮放速度
+        scale_speed = 0.1  # 縮放速度
         while True:   
             if scale_factor < 1.0:  
                 scale_factor += scale_speed
@@ -39,9 +46,12 @@ class GameOverView:
             screen.blit(self.item, self.item_position)
             pygame.display.flip()
             pygame.time.Clock().tick(10)
+        screen.blit(self.retry_button, self.retry_button_position)
+        pygame.display.flip()
+        pygame.time.Clock().tick(60)
             
     def handle_event(self, event):
-        if event.type == pygame.MOUSEBUTTONDOWN:
+        if event.type == pygame.MOUSEBUTTONDOWN and self.retry_button_rect.collidepoint(event.pos):
             return RETRY
         return None        
 
