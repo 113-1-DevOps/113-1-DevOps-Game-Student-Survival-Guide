@@ -3,4 +3,4 @@ class TyphoonController:
 
     def start(self):
         print('Typhoon')
-        return False
+        return True
