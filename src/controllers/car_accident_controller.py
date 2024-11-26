@@ -24,17 +24,17 @@ class CarAccidentController:
         """开始车祸关卡"""
         if pygame.display.get_surface() is None:
             pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-            print("Display initialized with set_mode in CarAccidentController.start()")
+
+        if self.view is None:
+            self.view = CarAccidentLevelView(self.model)    
 
         if self.view is None:
             self.view = CarAccidentLevelView(self.model)
-            print("CarAccidentLevelView initialized in CarAccidentController.start()")
 
         self.running = True
         clock = pygame.time.Clock()
         level_result = False  
 
-        print(f"Starting level with speed: {self.model.speed} and success_count: {self.model.success_count}")
 
         while self.running:
             for event in pygame.event.get():
@@ -45,34 +45,45 @@ class CarAccidentController:
                 elif event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_LEFT:
                         self.model.move_left()
-                        print("Player moved left")
                     elif event.key == pygame.K_RIGHT:
                         self.model.move_right()
-                        print("Player moved right")
 
             self.model.update_position()
-
-            print(f"Current speed: {self.model.speed}")
 
             if self.model.check_collision() or self.model.fuel <= 0:
                 self.running = False
                 level_result = False  
-                print("Level failed: Collision or fuel depleted")
             elif self.model.reached_goal():
                 self.model.increase_difficulty()
                 self.model.reset_for_next_level()
                 self.running = False
                 level_result = True  
-                print("Level succeeded: Reached goal")
+            
+            if self.model.check_collect_oil_drum():
+                self.model.refill_fuel()
 
             if self.model.check_collect_oil_drum():
                 self.model.refill_fuel()
-                print("Collected oil drum: Fuel refilled")
 
             self.view.draw()
 
             clock.tick(60)
 
-        print(f"Ending level with speed: {self.model.speed} and success_count: {self.model.success_count}")
-
         return level_result
+    # 測試「車禍」關卡
+    # def process_event_result(self, event_result):
+    #     if event_result == START or event_result == NEXT_INFORM:
+    #         level = CAR_ACCIDENT  
+    #         self.screen_state = level
+    #         is_continue = self.controller_map[level].start()
+    #         if is_continue:
+    #             self.switch_view(NEXT_INFORM)
+    #         else:
+    #             self.switch_view(GAME_OVER)
+    #     elif event_result == RETRY:
+    #         self.controller_map = {
+    #             TYPHOON: TyphoonController(),
+    #             TEACHEROUT: TeacheroutController(),
+    #             CAR_ACCIDENT: CarAccidentController()
+    #         }
+    #         self.switch_view(HOME)
