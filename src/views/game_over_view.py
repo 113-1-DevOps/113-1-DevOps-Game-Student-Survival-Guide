@@ -12,16 +12,19 @@ screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 
 class GameOverView:
     def __init__(self):
-        
         # 載入遊戲結束背景圖
         self.item = pygame.image.load("images/failpage/failpage_background.png")
         self.item = pygame.transform.scale(self.item, (SCREEN_WIDTH, SCREEN_HEIGHT))  
         self.original_item = self.item  # 保存原始圖片
         
         self.retry_button = pygame.image.load("images/failpage/failpage_button.png")
+        retry_button_width = self.retry_button.get_width() * 0.85
+        retry_button_height = self.retry_button.get_height() * 0.85
+        self.retry_button = pygame.transform.scale(self.retry_button, (retry_button_width,retry_button_height))
+
         self.retry_button_position = center_to_top_left(
-            2 * SCREEN_WIDTH / 3, 2 * SCREEN_HEIGHT / 3, #中心點 x,y
-            self.retry_button.get_width(), self.retry_button.get_height()
+            0.73 * SCREEN_WIDTH , 0.63 * SCREEN_HEIGHT ,
+            retry_button_width, retry_button_height
         )
         self.retry_button_rect = self.retry_button.get_rect(topleft=self.retry_button_position)
 
