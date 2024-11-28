@@ -9,10 +9,14 @@ class TransitionView:
         self.background = pygame.transform.scale(pygame.image.load("images/transitions/transition_heart_full.png"), (SCREEN_WIDTH, SCREEN_HEIGHT))
         self.background_position = (0, 0)
         self.button = pygame.image.load("images/transitions/transition_button.png")
-        # 下一關卡的按鈕的位置
+        button_width = self.button.get_width() * 0.9
+        button_height = self.button.get_height() * 0.9
+        self.button = pygame.transform.scale(self.button, (button_width,button_height))
+
+        # 下一關卡的按鈕的位置, test01
         self.button_position = center_to_top_left(
-            SCREEN_WIDTH / 2, SCREEN_HEIGHT / 3,
-            self.button.get_width(), self.button.get_height()
+            0.7 * SCREEN_WIDTH , 0.55 * SCREEN_HEIGHT ,
+            button_width, button_height
         )
         self.button_rect = self.button.get_rect(topleft=self.button_position)
 
