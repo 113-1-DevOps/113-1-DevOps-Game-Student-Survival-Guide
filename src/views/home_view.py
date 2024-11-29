@@ -10,10 +10,14 @@ class HomeView:
         self.background = pygame.image.load("images/frontpage/frontpage_background.png")
         self.background = pygame.transform.scale(self.background, (SCREEN_WIDTH, SCREEN_HEIGHT))
         self.start_button = pygame.image.load("images/frontpage/frontpage_button.png")
-        # 開始按鈕的位置
+        button_width = self.start_button.get_width() * 0.7
+        button_height = self.start_button.get_height() * 0.7
+        self.start_button = pygame.transform.scale(self.start_button, (button_width,button_height))
+
+        # 開始按鈕的位置, test02
         self.start_button_position = center_to_top_left(
-            2 * SCREEN_WIDTH / 3, 2 * SCREEN_HEIGHT / 3, #中心點 x,y
-            self.start_button.get_width(), self.start_button.get_height()
+            0.59 * SCREEN_WIDTH , 0.71 * SCREEN_HEIGHT ,
+            button_width, button_height
         )
         self.start_button_rect = self.start_button.get_rect(topleft=self.start_button_position)
 
