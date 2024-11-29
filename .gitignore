@@ -1,4 +1,4 @@
-﻿src/views/__pycache__/
+src/views/__pycache__/
 src/controllers/__pycache__/
 src/models/__pycache__/
 *.pyc
