@@ -14,7 +14,7 @@ class LevelModel:
 
 class GameModel:
     def __init__(self):
-        self.levels = [TYPHOON,TEACHEROUT,CAR_ACCIDENT]
+        self.levels = [TEACHEROUT]
         self.current_level = None
 
     def start_random_level(self):
