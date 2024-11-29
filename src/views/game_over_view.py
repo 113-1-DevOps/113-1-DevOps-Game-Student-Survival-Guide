@@ -38,7 +38,7 @@ class GameOverView:
 
             screen.blit(self.item, self.item_position)
             pygame.display.flip()
-            pygame.time.Clock().tick(10)
+            pygame.time.Clock().tick(100) # 原本是10
             
     def handle_event(self, event):
         if event.type == pygame.MOUSEBUTTONDOWN:
