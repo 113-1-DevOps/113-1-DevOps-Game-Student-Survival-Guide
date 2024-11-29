@@ -48,12 +48,10 @@ class GameOverView:
 
             screen.blit(self.item, self.item_position)
             pygame.display.flip()
-
             pygame.time.Clock().tick(10)
         screen.blit(self.retry_button, self.retry_button_position)
         pygame.display.flip()
         pygame.time.Clock().tick(60)
-
             
     def handle_event(self, event):
         if event.type == pygame.MOUSEBUTTONDOWN and self.retry_button_rect.collidepoint(event.pos):
