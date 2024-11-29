@@ -17,19 +17,11 @@ def start():
     try:
         while running:
             for event in pygame.event.get():
-                
                 if event.type == pygame.QUIT:
                     running = False
-                elif event.type == pygame.KEYDOWN:
-                    controller.handle_event(event)
                 elif event.type == pygame.MOUSEBUTTONDOWN:
                     controller.handle_event(event)
-                elif event.type == pygame.MOUSEBUTTONUP:
-                    controller.handle_event(event)
-                elif event.type == pygame.MOUSEMOTION:
-                    controller.handle_event(event)
-                else:
-                    continue
+                pygame.event.clear()
                     
             pygame.display.flip()
             clock.tick(60)

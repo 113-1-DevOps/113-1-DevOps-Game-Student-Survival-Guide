@@ -15,7 +15,8 @@ class GameController:
     def __init__(self):
         pygame.init()
         self.model = GameModel()
-        self.view_map = {
+        self.game_views_list = [HOME,TRANSITION,GAME_OVER] 
+        self.level_view_map = {
             HOME: HomeView(),
             TRANSITION: TransitionView(),
             GAME_OVER: GameOverView()
@@ -25,14 +26,12 @@ class GameController:
             TEACHEROUT: TeacheroutController(),
             CAR_ACCIDENT: CarAccidentController()
         }
-        self.current_view = self.view_map[HOME]
+        self.current_view = self.level_view_map[HOME]
         self.screen_state = HOME
         self.current_view.draw()
                 
     def handle_event(self,event):
-        if self.screen_state in self.controller_map:
-            self.controller_map[self.screen_state].handle_event(event)
-        else:
+        if self.screen_state in self.game_views_list:
             event_result = self.current_view.handle_event(event)
             if event_result:
                 self.process_event_result(event_result)
@@ -57,6 +56,6 @@ class GameController:
 
     def switch_view(self, new_state):
         self.screen_state = new_state
-        self.current_view = self.view_map[self.screen_state]
+        self.current_view = self.level_view_map[self.screen_state]
 
 
