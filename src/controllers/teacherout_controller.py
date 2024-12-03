@@ -115,7 +115,7 @@ class TeacheroutController:
     def initialize_screen(self, image_path):
         try:
             screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-            pygame.display.set_caption("Teacher Out Game")  # 設定視窗標題
+            # pygame.display.set_caption("Teacher Out Game")  # 設定視窗標題
 
             teacher_image = pygame.image.load(image_path)
             teacher_image = pygame.transform.scale(teacher_image, (SCREEN_WIDTH, SCREEN_HEIGHT))
