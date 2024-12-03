@@ -9,7 +9,7 @@ class TyphoonModel:
         self.wind_direction = 'LEFT'
         self.last_wind_change = pygame.time.get_ticks()
         self.obstacles = []
-        self.generate_obstacle_interval = 1000  # 每隔1秒生成障礙物
+        self.generate_obstacle_interval = 1300  # 每隔1秒生成障礙物
         self.last_obstacle_time = pygame.time.get_ticks()
         self.obstacle_images = [pygame.image.load(f"images/typhoon/obstacle_{i:02}.png") for i in range(1, 4)]
         self.lane_width = SCREEN_WIDTH // 10  # 調整軌道寬度，使其更緊密
