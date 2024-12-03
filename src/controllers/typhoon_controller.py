@@ -12,10 +12,11 @@ class TyphoonController:
         clock = pygame.time.Clock()
         running = True
         start_time = pygame.time.get_ticks()
+        countdown_time = 30  # 倒數計時30秒
 
         while running:
-            elapsed_time = (pygame.time.get_ticks() - start_time) / 1000
-            if elapsed_time >= 30:
+            elapsed_time = countdown_time - (pygame.time.get_ticks() - start_time) / 1000
+            if elapsed_time <= 0:
                 return True
 
             for event in pygame.event.get():
