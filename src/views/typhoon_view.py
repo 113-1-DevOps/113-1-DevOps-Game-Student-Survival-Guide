@@ -59,7 +59,7 @@ class TyphoonView:
         screen = pygame.display.get_surface()
 
         # 更新背景位置以實現滾動效果
-        self.update_background(2)  # 調整背景的下落速度
+        self.update_background(2)  # 調整背景滾動的速度
 
         # 畫出背景
         screen.blit(self.background_image, (0, self.bg_y1))
