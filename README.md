@@ -2,16 +2,16 @@
 
 ### Recent Activites
 <!--START_SECTION:activity-->
-1. 📝 Committed to [113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide](https://github.com/113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide/commit/d532eb97179ff571f0d0271af6f4cdaf5a0e0101)
-2. 🔀 Merged [PR #24](https://github.com/113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide/pull/24) in [113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide](https://github.com/113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide)
-3. 🔎 Reviewed [PR #24](https://github.com/113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide/pull/24) in [113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide](https://github.com/113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide)
-4. 🔄 Reopened an issue [#15](https://github.com/113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide/issues/15) in [113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide](https://github.com/113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide)
-5. ❌ Closed an issue [#15](https://github.com/113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide/issues/15) in [113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide](https://github.com/113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide)
-6. 📝 Committed to [113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide](https://github.com/113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide/commit/405045a87e137016b54abdf35ffbdf8c684ef53b)
-7. 🔀 Merged [PR #23](https://github.com/113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide/pull/23) in [113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide](https://github.com/113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide)
-8. 🔎 Reviewed [PR #23](https://github.com/113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide/pull/23) in [113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide](https://github.com/113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide)
-9. 🗑️ Deleted a branch `Develop-UI` in [113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide](https://github.com/113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide)
-10. 📝 Committed to [113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide](https://github.com/113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide/commit/1c3d8f917df1d73401f0d12744589164bd431734)
+1. 🆕 Opened an issue [#67](https://github.com/113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide/issues/67) in [113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide](https://github.com/113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide)
+2. 🆕 Opened an issue [#66](https://github.com/113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide/issues/66) in [113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide](https://github.com/113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide)
+3. 🆕 Opened an issue [#65](https://github.com/113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide/issues/65) in [113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide](https://github.com/113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide)
+4. 🆕 Opened an issue [#64](https://github.com/113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide/issues/64) in [113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide](https://github.com/113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide)
+5. 🆕 Opened an issue [#63](https://github.com/113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide/issues/63) in [113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide](https://github.com/113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide)
+6. 🗣 Commented on issue [#52](https://github.com/113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide/issues/52) in [113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide](https://github.com/113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide): [View Comment](https://github.com/113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide/issues/52#issuecomment-2510581211)
+7. ❌ Closed an issue [#52](https://github.com/113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide/issues/52) in [113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide](https://github.com/113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide)
+8. ❌ Closed an issue [#38](https://github.com/113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide/issues/38) in [113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide](https://github.com/113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide)
+9. ❌ Closed an issue [#16](https://github.com/113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide/issues/16) in [113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide](https://github.com/113-1-DevOps/113-1-DevOps-Game-Student-Survival-Guide)
+10. 📝 Committed to [StarrySkyYX/OnlineGame-2048](https://github.com/StarrySkyYX/OnlineGame-2048/commit/a5b4b34f8a31aa52229788fb190121f04a17abf5)
 <!--END_SECTION:activity-->
 
 ### About Me
