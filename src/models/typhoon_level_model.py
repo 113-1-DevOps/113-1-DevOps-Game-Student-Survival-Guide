@@ -1,6 +1,11 @@
 import pygame
 import random
 from config.constants import *
+from flagsmith import Flagsmith
+import os
+
+flagsmith = Flagsmith(environment_key = os.environ["FLAGSMITH_KEY"])
+
 
 class TyphoonModel:
     def __init__(self):
@@ -15,6 +20,8 @@ class TyphoonModel:
         self.lane_width = SCREEN_WIDTH // 10  # 調整軌道寬度，使其更緊密
         self.move_speed = 4  # 調整角色的移動速度，使其更快
         self.lane_start_x = (SCREEN_WIDTH - (self.lane_width * 5)) // 2 - 10  # 水平置中並向左移動10
+
+        
 
     def move_player(self, direction):
         self.player_pos[0] += direction * self.move_speed  # 調整移動速度
